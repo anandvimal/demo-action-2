@@ -1,0 +1,13 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Action 2 Disptach
+
+on: [repository_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Event Information
+        run: |
+          echo "Event '${{ github.event.action }}' recived from '${{ github.event.client_payload.repository }}'"
